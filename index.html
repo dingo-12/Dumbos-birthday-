@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#32131d"><title>For Dumbo ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+  <div class="topline"><span>13.11.2008 ♡</span><button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">♫ Play birthday tune</button></div>
+  <main>
+    <section id="quizView" class="view active">
+      <p class="eyebrow">A LITTLE BIRTHDAY CHALLENGE</p><h1>How well do you<br><em>know us?</em></h1>
+      <p class="intro">Five questions. No pressure, Dumbo.</p>
+      <div class="quiz-card"><div class="quiz-meta"><span id="questionCount">QUESTION 1 / 5</span><span id="scoreLabel">♡</span></div><div class="progress"><span id="progressBar"></span></div>
+        <h2 id="questionText"></h2><div id="answers" class="answers"></div><p id="feedback" class="feedback" aria-live="polite"></p><button id="nextQuestion" class="button hidden" type="button">Next →</button>
+      </div><p class="tiny-note">A tiny test made by Dingo, obviously.</p>
+    </section>
+    <section id="resultView" class="view"><p class="eyebrow">THAT'S A WRAP</p><h1>You did it,<br><em>Dumbo.</em></h1><p id="finalScore" class="intro">You got 0 out of 5.</p><p class="intro">Your actual prize is waiting inside.</p><button id="enterSite" class="button" type="button">Enter your surprise →</button></section>
+    <section id="homeView" class="view"><p class="eyebrow">A LITTLE SOMETHING FOR YOU</p><h1>Happy Birthday,<br><em>Dumbo.</em></h1><p class="intro">Pick something. There's more than one surprise.</p>
+      <div class="home-grid">
+        <button class="nav-card" data-open="thenView"><span class="symbol">✧</span><strong>Then &amp; Now</strong><small>Four little photographs</small></button>
+        <button class="nav-card" data-open="cornerView"><span class="symbol">✉</span><strong>Our Corner</strong><small>A little world of ours</small></button>
+        <button class="nav-card" data-open="presentView"><span class="symbol">🎁</span><strong>A Present</strong><small>A little surprise to scratch</small></button>
+        <button class="nav-card" data-open="noteView"><span class="symbol">♡</span><strong>A Note</strong><small>From Dingo</small></button>
+      </div><p class="signature">MADE WITH LOVE · DINGO ♡</p>
+    </section>
+    <section id="thenView" class="view subview"><button class="back" data-home>← Back to Home</button><p class="eyebrow">A LITTLE TRIP THROUGH TIME</p><h1>Then &amp; Now</h1><p class="intro">Four little photographs. One favourite person.</p>
+      <div class="polaroids">
+        <figure class="polaroid"><img src="assets/then-01.jpg" alt="Childhood photograph one"><figcaption>Little Dumbo · 01</figcaption></figure>
+        <figure class="polaroid tilt"><img src="assets/then-02.jpg" alt="Childhood photograph two"><figcaption>Little Dumbo · 02</figcaption></figure>
+        <figure class="polaroid"><img src="assets/then-03.jpg" alt="Childhood photograph three"><figcaption>Little Dumbo · 03</figcaption></figure>
+        <figure class="polaroid tilt"><img src="assets/then-04.jpg" alt="Recent photograph"><figcaption>And look at you now ♡</figcaption></figure>
+      </div>
+    </section>
+    <section id="cornerView" class="view subview"><button class="back" data-home>← Back to Home</button><p class="eyebrow">A PLACE THAT'S OURS</p><h1>Our Corner</h1><p class="intro">Little things that remind me of us.</p>
+      <div class="corner-grid">
+        <article class="memory-card wide"><h2>01 · A song for you</h2><img src="assets/song-poster.jpg" alt="The 1975 About You poster"><p><a id="songLink" href="https://music.youtube.com/watch?v=4PgOJwUCdIc&amp;drli=1" target="_blank" rel="noopener">Listen to our song ↗</a></p></article>
+        <article class="memory-card wide"><h2>02 · Officially certified</h2><img src="assets/certificate.png" alt="Pink certificate of appreciation"></article>
+        <article class="memory-card wide"><h2>03 · Little conversations</h2><div class="screenshots"><img src="assets/chat-01.jpg" alt="Conversation screenshot one"><img src="assets/chat-02.jpg" alt="Conversation screenshot two"><img src="assets/chat-03.jpg" alt="Conversation screenshot three"></div></article>
+        <article class="memory-card wide playlist"><span class="symbol">♫</span><h2>04 · A playlist for Dumbo</h2><p>A few songs I picked with you in mind.</p><a id="playlistLink" class="button link-button" href="https://music.youtube.com/playlist?list=PLTYoTWIocU-8&amp;drli=1" target="_blank" rel="noopener">Play our playlist ↗</a></article>
+      </div>
+    </section>
+    <section id="presentView" class="view subview"><button class="back" data-home>← Back to Home</button><p class="eyebrow">A FEW LITTLE SURPRISES</p><h1>A Little Present</h1><p class="intro">A tiny box. A little scratch. A surprise inside.</p>
+      <article class="present-card scratch-card"><h2>Scratch to reveal your surprise ♡</h2><div class="scratch-wrap"><div class="gift-under"><div class="gift-emoji">🎂</div><p>You've got a birthday cake!</p><button id="openCake" class="button" type="button" disabled>Open your cake →</button></div><canvas id="scratchCanvas" aria-label="Scratch this panel to reveal the birthday cake"></canvas></div><p id="scratchHint" class="scratch-hint">Use your finger to scratch the glitter away.</p></article>
+      <div class="present-list"><article class="present-card"><h2>01 · A Little Drawing</h2><div class="reveal-wrap"><img src="assets/drawing.jpg" alt="A birthday drawing for Dumbo"><canvas class="reveal-canvas" aria-label="Scratch to reveal the drawing"></canvas></div><p class="scratch-hint">Scratch the glitter to see your drawing ♡</p></article>
+        <article class="present-card"><h2>02 · Some Flowers</h2><div class="reveal-wrap bouquet-reveal"><div class="bouquet-under"><div class="flower-art">💐</div><p>A little something, delivered digitally.</p><p class="hint">Hint for the bouquet password: <strong>your birthdate</strong></p><a id="bouquetLink" href="https://digibouquet.net/bouquet/a03b3971-7756-4d84-9096-0eb19a806c9d" target="_blank" rel="noopener">Open your flowers →</a></div><canvas class="reveal-canvas" aria-label="Scratch to reveal the bouquet"></canvas></div><p class="scratch-hint">Scratch to reveal your flowers ♡</p></article>
+      </div>
+    </section>
+    <section id="cakeView" class="view subview"><button class="back" data-home>← Back to Home</button><div class="cake-page"><section class="cake-card"><p class="eyebrow">MAKE A WISH</p><h1>Happy Birthday,<br><em>Dumbo.</em></h1><div class="big-cake" aria-label="A birthday cake with lit candles"><div class="candle-row"><i class="candle"><b class="flame"></b></i><i class="candle"><b class="flame"></b></i><i class="candle"><b class="flame"></b></i></div><div class="icing"></div><div class="layer layer-top"></div><div class="layer layer-bottom"></div></div><p>Make a wish, dumbo. May this year be kinder, brighter, and full of things that make you ridiculously happy. ♡</p><p class="cake-heart">✧ ✦ ✧</p></section></div></section>
+    <section id="noteView" class="view subview"><button class="back" data-home>← Back to Home</button><p class="eyebrow">SOMETHING I WANTED TO TELL YOU</p><h1>A Note For You</h1><button id="envelope" class="envelope" type="button" aria-label="Open your letter"><span>D</span></button><p class="intro">Tap the envelope to open.</p>
+      <article id="letter" class="letter hidden">
+        <p><strong>Yeet, hii! Or should I say Archan? Oh no, you are my dumbo, I love calling you dumbo.</strong></p>
+        <p>So yeah, where do I even start? OMG, these past few months have been crazy asf for me. Starting from the NEET leak to Re-NEET, to the counselling fiasco, and dealing with drop-year depression, the one thing I always look forward to is talking to you.</p>
+        <p>A few months back, I was going through a genuinely difficult time. Your presence made the days feel lighter, and I started looking forward to our daily late-night conversations. They gave me comfort when I needed it, and I don't think you realise how much your kindness and company meant to me. You became someone whose presence made a difference. Thank you for being there, dumbo.</p>
+        <p>I already told you how I truly believe in the irony of fate and destiny. We’ve already been through this topic, and I told you the story of the prophecy Oedipus got—that he’d kill his dad and marry his mom, and how every attempt to change his destiny just led him straight to completing it. Weird, right? Lol. Similarly, even if I say I don't believe in my destiny, I know it’s gonna happen anyway, and that’s why I’m so fucking grateful to the universe that it made me meet you.</p>
+        <p>Also, didn't I talk about how I'm the worst as a friend? I ghost, I'm emotionally unavailable most of the time, and I get overwhelmed and overstimulated easily. Yet, you still kept saying, "I hope I won't be the recipient of the ghosting." I was like, "Heh, you are being too optimistic, lol." But here I am! Even if I was tired the whole day, even if I felt like sleeping all day, or even if I felt like I could bore a hole in the ground and sleep in it, I still came to talk to you. I still found myself thinking about you, and I was still interested in knowing how your day went. That's how important you are to me, I don't think I’ll ever ghost you.</p>
+        <p>It’s been 5.5 months, dumbo, and it feels so unreal. I already told you how I've never clicked this much or this quickly with a guy, and here we are, lol. These past few months, I kept contradicting my own statements, and isn't it ironic how I kept doing it just for you? I don't hate it; rather, I fucking love this.</p>
+        <p>I still remember the first day when I unpromptedly joined that gc. You were talking with that sp Founder, and I kept feeling awkward talking in between, but you didn't make me feel like an outsider. You tried your best to keep me in the conversation. The next few days, we kept talking to each other. Remember at first how I kept shipping you with Puran Poli? Lmaoo, so unhinged, lol. Then days went by, and everyone flipped and started shipping you with me, like lmao? But you started this fire, ngl. Like, wdym you replied "yes" when Nod said, "Yeet only comes when Dingo is active," and you also kept asking "Where's Dingo?" when I was busy with Re-NEET Lmao?</p>
+        <p>Then came June 18th—or 17th, I don't really remember, yrr, when I unpromptedly found a post on recluseindia that reminded me of you because you were being super pessimistic and nihilistic the day before on our main GC. So, I thought, "Let's talk to him," and that’s how our friendship got even stronger. (I’m still mad at the fact that I was the one who DMed you first, hmmp!) Then, you sent me a heartwarming "all the best" message before my Re-NEET. Trust me, that made me so fucking emotional, and I got immense motivation and support from it. 🥹</p>
+        <p>Now, we are literally walking on a thin line around each other, and I think it’s alright because we’re both comfortable with it. (I can't believe I'm saying this, considering I always said I'm only excited for situationships and overly unavailable for any kind of relationship, lol.) I just can't believe we went from being strangers, to friends, to best friends who keep on flirting, to more than best friends, yet less than smtg lol😭</p>
+        <p>Yeet, ily!! You are an amazing person, guy, and friend. I’ll never forget you. You’ve left such an immense piece of yourself in my heart and my life that—God forbid—if we ever drift apart, that empty space is never going to be filled. It’s always going to remain empty because you have literally become a huge part of my life. You mean everything to me.</p>
+        <p>Regardless of what happens in the future or wherever life takes us, I just want to cherish whatever this is right now. No labels, no pressure. Just us being us, annoying each other, flirting, and having each other's backs. You genuinely make me want to be a better person, and I can't wait to see what more memories we end up making together, dumbo.</p>
+        <p>Anyway, before I get even more sappy and ruin my whole "emotionally unavailable" reputation, I'll stop here, lol. Just know that you’re stuck with me now, and I’m really glad it's you.</p>
+        <p>Thank you for coming into my life, yeet (my dumbo). ilysm 💗</p>
+        <p class="letter-signoff">With love,<br>Dingo ♡</p>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body></html>
